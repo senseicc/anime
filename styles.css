@@ -1,0 +1,604 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#cor{
+    height: 100vh;
+    transition: all 1s ease;
+    transform: translatey(0);
+}
+#besar{
+    overflow: hidden;
+    height: 100vh;
+    background: url('mainnn.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+.boc{
+    width: 100%;height: 100vh;
+    flex-shrink: 0;
+    display: flex;
+}
+@keyframes move {
+    0% {
+        transform: translatey(100px); /* Mulai dari bawah */
+    }
+    100% {
+        transform: translatey(0); /* Naik ke posisi semula */
+    }
+}
+@keyframes movel {
+    0% {
+        transform: translatey(-100px); /* Mulai dari bawah */
+    }
+    100% {
+        transform: translatey(0); /* Naik ke posisi semula */
+    }
+}
+@keyframes movex {
+    0% {
+        transform: translatex(100px); /* Mulai dari bawah */
+    }
+    100% {
+        transform: translatex(0); /* Naik ke posisi semula */
+    }
+}
+@keyframes movexl {
+    0% {
+        transform: translatex(-100px); /* Mulai dari bawah */
+    }
+    100% {
+        transform: translatex(0); /* Naik ke posisi semula */
+    }
+}
+@keyframes opacity {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes scale {
+    from{
+        scale: 0;
+    }to{
+        scale: 1;
+    }
+}
+@keyframes m {
+    0% {
+        transform: translate(-50%,100px); /* Mulai dari bawah */
+    }
+    100% {
+        transform: translate(-50%,0); /* Naik ke posisi semula */
+    }
+}
+.box{
+    position: absolute;
+    width: 300px;
+    top: 50px;
+    height: 500px;
+    box-shadow:0 0 30px #3d3d7f;
+    border-radius: 60px;
+    backdrop-filter: blur(10px);
+    animation: scale 1s linear 1,opacity 1s linear 1;
+    cursor: pointer;
+}
+#left{
+    left: 100px;
+    background: url('cw.png');
+    background-position: center center;
+}
+#mid{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    background: url('lk.png');
+    background-position: center center;
+}
+#right{
+    right: 100px;
+    background: url('ro.png');
+    background-position: center center;
+}
+#left,#right,#mid{
+    transition: all 0.5s ease-in-out;
+    background-size:167%;
+    z-index: 1;
+}
+#right:hover{
+    background-size: 250%;
+    box-shadow: 0 0 30px lightcoral;
+}
+#mid:hover{
+    background-size: 250%;
+    box-shadow: 0 0 30px lightblue;
+}
+#left:hover{
+    box-shadow: 0 0 30px lightseagreen;
+    background-size: 250%;
+}
+#one button{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    color: white;
+    height: 50px;
+    border: 1px solid lightblue;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    cursor: pointer;
+    font-family: 'great vibes',cursive;
+    font-size: 30px;
+    background: #add8e660;
+    backdrop-filter: blur(10px);
+    transition: all 0.5s ease-in-out;
+    animation: m 1s linear 1;
+}
+#one button:hover{
+    box-shadow: 0 0 30px lightblue;
+}
+.mybut{
+    display: flex;
+    gap: 100px;
+}
+.mybut button:hover{
+    box-shadow: 0 0 30px lightblue;
+}
+.square{
+    cursor: pointer;
+    margin-top: 50px;
+    width: 250px;
+    height: 100px;
+    color: white;
+    border-radius: 50px 0 ;
+    background: white;
+    backdrop-filter: blur(10px);
+    border: 3px solid #3d3d7f;
+    border: 1px solid lightblue;
+    font-family: 'great vibes',cursive;
+    font-size: 30px;
+    background: #add8e660;
+    backdrop-filter: blur(10px);
+    transition: all 0.5s ease-in-out;
+}
+.square h2{
+    font-size: 50px;
+    bottom: 0px;
+    left: 10px;
+}
+.arrow{
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    transform: rotate(-50deg);
+}
+.body{
+    width:45px;
+    height: 3px;
+    background-color: white;
+}
+.leftb{
+    margin-top: 3px;
+    position: absolute;
+    left: 30px;
+    transform: rotate(-50deg);
+    width:20px;
+    height: 3px;
+    background-color: white;
+}
+.rightb{
+    margin-top: -10px;
+    position: absolute;
+    left: 30px;
+    transform: rotate(49deg);
+    width:20px;
+    height: 3px;
+    background-color: white;
+}
+.dir{
+    top: 55px;
+    right: 10px;
+    transform: rotate(50deg);
+}
+
+
+.malida{
+    color: #dcb32b ;
+    border:1px solid #dcb32b;
+}
+#malidapiece1{
+    background: url('cw.png');
+    background-position: -175px;
+    background-size: cover;
+}
+#malidapiece2{
+    background: url('cw.png');
+    background-position: -280px;
+    background-size: cover;
+
+}
+#malidapiece3{
+    background: url('cw.png');
+    background-position: -340px ;
+    background-size: cover;
+}
+#malidapiece4{
+    background: url('cw.png');
+    background-position: -460px -10px;
+    background-size: cover;
+
+}
+#malidapiec1{
+    background: url('cw.png');
+    background-position: center 0px;
+    background-size: cover;
+}
+#malidapiec2{
+    background: url('cw.png');
+    background-position: center -90px;
+    background-size: cover;
+
+}
+#malidapiec3{
+    background: url('cw.png');
+    background-position: center  -180px;
+    background-size: cover;
+}
+#malidapiec4{
+    background: url('cw.png');
+    background-position: center -270px;
+    background-size: cover;
+}
+#onee{
+    bottom: 150px;
+    font-size: 60px;
+    color: #dcb32b ;
+}
+
+.zenon{
+    color: lightblue;
+    border: 1px solid lightblue;
+}
+#zenonpiece1{
+    background: url('lk.png');
+    background-position: -175px;
+    background-size: cover;
+}
+#zenonpiece2{
+    background: url('lk.png');
+    background-position: -280px;
+    background-size: cover;
+
+}
+#zenonpiece3{
+    background: url('lk.png');
+    background-position: -340px ;
+    background-size: cover;
+}
+#zenonpiece4{
+    background: url('lk.png');
+    background-position: -460px -10px;
+    background-size: cover;
+
+}
+#zenonpiec1{
+    background: url('lk.png');
+    background-position: center 0px;
+    background-size: cover;
+}
+#zenonpiec2{
+    background: url('lk.png');
+    background-position: center -90px;
+    background-size: cover;
+
+}
+#zenonpiec3{
+    background: url('lk.png');
+    background-position: center  -180px;
+    background-size: cover;
+}
+#zenonpiec4{
+    background: url('lk.png');
+    background-position: center -270px;
+    background-size: cover;
+}
+#twoo{
+    bottom: 150px;
+    font-size: 60px;
+    color: lightskyblue ;
+}
+
+
+
+.Iris{
+    color: lightcoral;
+    border: 1px solid lightcoral;
+}
+#Irispiece1{
+    background: url('ro.png');
+    background-position: -174px;
+    background-size: cover;
+}
+#Irispiece2{
+    background: url('ro.png');
+    background-position: -280px -2px;
+    background-size: cover;
+
+}
+#Irispiece3{
+    background: url('ro.png');
+    background-position: -340px ;
+    background-size: cover;
+}
+#Irispiece4{
+    background: url('ro.png');
+    background-position: -460px -10px;
+    background-size: cover;
+
+}
+#Irispiec1{
+    background: url('ro.png');
+    background-position: center 0px;
+    background-size: cover;
+}
+#Irispiec2{
+    background: url('ro.png');
+    background-position: center -90px;
+    background-size: cover;
+
+}
+#Irispiec3{
+    background: url('ro.png');
+    background-position: center  -180px;
+    background-size: cover;
+}
+#Irispiec4{
+    background: url('ro.png');
+    background-position: center -270px;
+    background-size: cover;
+}
+
+#three{
+    bottom: 150px;
+    font-size: 60px;
+    color: lightcoral ;
+}
+
+
+.pieco{
+    position: relative;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    right: -500px;
+    z-index: 10;
+}
+.pic{
+    backdrop-filter: blur(10px);
+    position: relative;
+    width: 600px;
+    height: 80px;
+}
+.x{
+    border-radius: 10px 100px;
+}
+.xl{
+    border-radius: 10px 100px;
+}
+.hortemx{
+    animation: movex 1s linear infinite,opacity 1s linear infinite;
+}
+.hortemxl{
+    animation: movexl 1s linear infinite,opacity 1s linear infinite;
+}
+.h1{
+    font-size: 200px;
+    position: absolute;
+    left: 0;
+    border: none;
+}
+.quote{
+    width: 350px;
+    height: 500px;
+    background:#add8e667 ;
+    backdrop-filter: blur(10px);
+    position: absolute;
+    border-radius: 0 100px;
+    top: 50px;
+    right: -380px;
+}
+.decor1{
+    border-radius: 0 100px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    background: #2b69dc66;
+}
+.decor2{
+    border-radius: 0 100px;
+    position: absolute;
+    bottom: 0;
+    width: 200px;
+    background: #2b69dc66;
+    height: 100px;
+}
+.h2{
+    z-index: 2;
+    font-size: 100px;
+    position: absolute;
+    border: none;
+}
+.p{
+    font-weight: bolder;
+    bottom: 200px;
+    left: 20px;
+    z-index: 2;
+    font-size: 40px;
+    position: absolute;
+    color: #fff ;
+    border: none;
+}
+.piece{
+    position: relative;
+    top: 150px;
+    display: flex;
+    gap: 5px;
+    left: 100px;
+    z-index: 10;
+}
+.piec{
+    backdrop-filter: blur(10px);
+    position: relative;
+    width: 80px;
+    height: 550px;
+}
+.pan{
+    animation: move 1s infinite,opacity 1s infinite;
+}
+.panl{
+    animation: movel 1s infinite,opacity 1s infinite;
+}
+.template1{
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;  
+    height: 500px;
+    top: 20px;
+}
+.template2{
+    border-top-left-radius: 100px;
+    top: 5px;
+    border-bottom-right-radius: 100px;
+}
+
+@media (max-width: 768px)  {
+    #besar {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .box {
+        width: 50%;
+        height: 250px;
+        border-radius: 30px;
+    }
+
+    #left{
+        top: 90px;
+        left:0;
+    }
+    #right{
+        top: 90px;
+        right:0;
+    }
+
+    #mid{
+        top: 460px;
+    }
+
+    #left, #mid, #right {
+        background-size: cover;
+    }
+
+    #one button {
+        width: 90%;
+        font-size: 24px;
+    }
+
+    .mybut {
+        position: absolute;
+        top: 240px;
+        left: -150px;
+        gap: 5px;
+        align-items: center;
+    }
+
+    .square {
+        width: 150px;
+        height: 80px;
+        font-size: 24px;
+    }
+
+    .quote {
+        width: 60%;
+        height: 250px;
+        padding: 20px;
+        left: 0px;
+        top: 250px;
+    }
+
+    .decor1{
+        width: 60%;
+        height: 30%;
+        right: 5px;
+    }
+    .decor2{
+        width: 60%;
+        height: 30%;
+        left: 0;
+    }
+
+    .h2{
+        font-size: 50px;
+        left: 0;
+    }
+
+    .p {
+        top: 100px;
+        font-size: 20px;
+    }
+    #onee{
+        top: 140px;
+        font-size: 30px;
+    }
+    #twoo{
+        top: 140px;
+        font-size: 30px;
+    }
+    .h1{
+        font-size: 60px;
+    }
+    .template1{
+        height: 250px;
+    }
+    .piec{
+        width: 50px;
+        height: 230px;
+    }
+    .piece{
+        top: 50px;
+        left: 10px;
+    }
+    #malidapiece1{
+        background-position: -20px;
+    }
+    #malidapiece3{
+        background-position: -110px;
+    }
+    #malidapiece4{
+        background-position: -157px 20px;
+    }
+    .pieco{
+        top: 310px;
+        left: -60px;
+    }
+    .pic{
+        width: 200px;
+        height: 50px;
+    }
+    #malidapiec2{
+        background-position: center -55px;
+    }
+    #malidapiec3{
+        background-position: center -105px;
+    }
+    #malidapiec4{
+        background-position: center 50px;
+    }
+}
